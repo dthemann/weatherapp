@@ -12,8 +12,6 @@ import javafx.scene.control.RadioButton;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import org.apache.commons.lang3.StringUtils;
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -73,13 +71,13 @@ public class frm_configurateController {
 
         if(StringUtils.isAlphanumeric(loc_searchString))
         {
-            List<Location> foundLocations = new ArrayList<Location>();
-            Location new_location = new Location();
+            List<Configuration.Location> foundLocations = new ArrayList<Configuration.Location>();
+            Configuration.Location new_location = new Configuration.Location();
             foundLocations = new_location.get_locationsList(loc_searchString);
 
             if(!foundLocations.isEmpty())
             {
-                ObservableList<Location> obsfoundLocations = FXCollections.observableList(foundLocations);
+                ObservableList<Configuration.Location> obsfoundLocations = FXCollections.observableList(foundLocations);
                 //lv_Locations.setItems(obsfoundLocations);
             }
         }
