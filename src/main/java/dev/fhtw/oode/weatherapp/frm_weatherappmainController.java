@@ -53,15 +53,12 @@ public class frm_weatherappmainController {
     void bt_Configure_Clicked(MouseEvent event) throws IOException {
 
         try {
-
-            Parent new_root = FXMLLoader.load(getClass().getResource("frm_locationFinder.fxml"));
-
-            Stage stage = new Stage();
-            Scene scene = new Scene(new_root);
-
-            stage.setTitle("Location Finder");
-            stage.setScene(scene);
-            stage.show();
+            Stage stage_location = new Stage();
+            FXMLLoader locationscene_fxmlLoader = new FXMLLoader(WeatherApplication.class.getResource("frm_locationFinder.fxml"));
+            Scene scene_location = new Scene(locationscene_fxmlLoader.load(), 800,400);
+            stage_location.setTitle("Location Finder");
+            stage_location.setScene(scene_location);
+            stage_location.show();
 
         } catch (IOException e) {
 

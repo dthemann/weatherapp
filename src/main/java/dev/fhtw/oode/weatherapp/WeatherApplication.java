@@ -12,11 +12,10 @@ public class WeatherApplication extends Application {
     @Override
     public void start(Stage mainstage) throws IOException {
 
-        //FXMLLoader mainstage_fxmlLoader = new FXMLLoader(WeatherApplication.class.getResource("frm_weatherappmain.fxml"));
-
-        Parent root = FXMLLoader.load(getClass().getResource("frm_weatherappmain.fxml"));
+        FXMLLoader mainstage_fxmlLoader = new FXMLLoader(WeatherApplication.class.getResource("frm_weatherappmain.fxml"));
+        Scene main_scene = new Scene(mainstage_fxmlLoader.load(), 800,400);
         mainstage.setTitle("Weather @ Location");
-        mainstage.setScene(new Scene(root, 800, 400));
+        mainstage.setScene(main_scene);
         mainstage.show();
 
         try {
