@@ -1,4 +1,4 @@
-package dev.fhtw.oode.weatherapp.location;
+package dev.fhtw.oode.weatherapp.configurate;
 
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -11,15 +11,15 @@ import java.util.List;
 
 import static java.time.temporal.ChronoUnit.SECONDS;
 
-public class location {
+public class Location {
 
     double locationLatitude;
     double locationLongitude;
     String locationName;
 
-    public List<location> get_locationsList(String location_searchTerm)
+    public List<Location> get_locationsList(String location_searchTerm)
     {
-        List<location> foundLocations = new ArrayList<location>();
+        List<Location> foundLocations = new ArrayList<Location>();
 
         try {
             String API_GET_String = "http://api.positionstack.com/v1/forward?access_key=e5ad9d29388ca616373e64d03e97deae&query=Königsbrunn";
@@ -54,7 +54,7 @@ public class location {
         return foundLocations;
     }
 
-    public location() {
+    public Location() {
 
     }
 
