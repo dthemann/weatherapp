@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane prefHeight="260.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dev.fhtw.oode.weatherapp.location.frm_locationFinderController">
+   <children>
+      <BorderPane prefHeight="277.0" prefWidth="600.0">
+         <top>
+            <Label text="Weather App Location Setup" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </BorderPane.margin>
+            </Label>
+         </top>
+         <center>
+            <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="126.0" prefWidth="213.0">
+                     <children>
+                        <Label text="Serach for Location">
+                           <VBox.margin>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="tf_serachLocation" promptText="Enter location here">
+                           <VBox.margin>
+                              <Insets bottom="20.0" left="20.0" right="20.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <Button fx:id="bt_searchLocation" mnemonicParsing="false" onAction="#bt_searchLocationButtonClicked" text="Search">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="115.0" prefWidth="374.0">
+                     <children>
+                        <Label text="Matching Locations Found">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <ListView fx:id="lv_Locations" prefHeight="104.0" prefWidth="334.0">
+                           <VBox.margin>
+                              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                           </VBox.margin>
+                        </ListView>
+                        <Button fx:id="bt_selectLocation" mnemonicParsing="false" onAction="#bt_selectLocationButtonClicked" text="Select Location" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </center>
+         <bottom>
+            <Label fx:id="lb_locsetup_log" alignment="BOTTOM_RIGHT" contentDisplay="RIGHT" prefHeight="16.0" prefWidth="576.0" BorderPane.alignment="CENTER" />
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>
