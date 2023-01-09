@@ -1,5 +1,6 @@
 package dev.fhtw.oode.weatherapp.configurate;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -13,10 +14,17 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import org.apache.commons.lang3.StringUtils;
 
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
 public class frm_configurateController {
+
+    @FXML
+    private Button bt_LoadConfig;
+
+    @FXML
+    private Button bt_SaveConfig;
 
     @FXML
     private Button bt_searchLocation;
@@ -64,10 +72,28 @@ public class frm_configurateController {
     private TextField tf_serachLocation;
 
     @FXML
-    void bt_searchLocationButtonClicked(ActionEvent event) {
+    void bt_LoadConfigButtonClicked(MouseEvent event) {
 
+    }
+
+    @FXML
+    void bt_SaveConfigButtonClicked(MouseEvent event) {
+
+    }
+
+    @FXML
+    void bt_searchLocationButtonClicked(ActionEvent event) {
         String loc_searchString = tf_serachLocation.getText().toString();
         System.out.println(loc_searchString);
+
+        /*
+        ObjectMapper mapper = new ObjectMapper();
+        try {
+            mapper = Configuration.Location.get_locations();
+        } catch (Exception e)
+        {
+
+        }*/
 
         if(StringUtils.isAlphanumeric(loc_searchString))
         {
@@ -81,7 +107,6 @@ public class frm_configurateController {
                 //lv_Locations.setItems(obsfoundLocations);
             }
         }
-
     }
 
     @FXML

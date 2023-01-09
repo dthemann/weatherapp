@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import com.fasterxml.jackson.databind.JsonNode;
 
 public class WeatherApplication extends Application {
     @Override

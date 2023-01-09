@@ -4,6 +4,8 @@ module dev.fhtw.oode.weatherapp {
     requires java.net.http;
     requires org.apache.commons.lang3;
     requires de.jensd.fx.glyphs.fontawesome;
+    requires com.fasterxml.jackson.databind;
+    requires android.json;
 
 
     opens dev.fhtw.oode.weatherapp to javafx.fxml;
